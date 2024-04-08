@@ -50,6 +50,8 @@ while(userInput!=5):
 
     elif userInput == 3:
         print("The application will display the total expenses for each category\n")
+        for i in allCategories:
+            print("Category Name: %s  Total Expense: %d" % (i.categoryName, i.expenseValue))
 
 
     elif userInput == 4:
