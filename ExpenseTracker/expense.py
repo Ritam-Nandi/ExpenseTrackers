@@ -18,7 +18,7 @@ allCategories = []
 
 userInput=6
 while(userInput!=5):
-    print("Expense Tracker Menu:\n1. Add Expense \n2. Add Category \n3. View Expenses\n4. View Categories\n5. Exit ")
+    print("\nExpense Tracker Menu:\n1. Add Expense \n2. Add Category \n3. View Expenses\n4. View Categories\n5. Exit ")
     userInput= int(input())
 
     if userInput == 1:
@@ -42,22 +42,22 @@ while(userInput!=5):
         
 
     elif userInput == 2:
-        print("Enter the name of the new category\n")
+        print("Enter the name of the new category")
         categoryInput=input()
         cat=Category(categoryInput,0)
         allCategories.append(cat)
 
 
     elif userInput == 3:
-        print("The application will display the total expenses for each category\n")
+        print("The application will display the total expenses for each category")
         for i in allCategories:
             print("Category Name: %s  Total Expense: %d" % (i.categoryName, i.expenseValue))
 
 
     elif userInput == 4:
-        print("The application will display a list of available categories\n")
-        for i in allExpenses:
-            i.printExpense()
+        print("The application will display a list of available categories")
+        for i in allCategories:
+            print(i.categoryName)
 
 
     elif userInput == 5:
@@ -65,5 +65,5 @@ while(userInput!=5):
 
 
     else:
-        print("Please enter a valid option\n")
+        print("Please enter a valid option")
         
